@@ -1,14 +1,14 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: lmw-apps
+  name: helm-chart
   namespace: argocd
-spec: 
+spec:
   project: default
   source:
-    repoURL: https://github.com/laurawarren88/argoCD.git
+    repoURL: https://github.com/laurawarren88/helm-chart.git
     targetRevision: HEAD
-    path: apps
+    path: .
   destination:
     server: https://kubernetes.default.svc
     namespace: lmw-fitness
