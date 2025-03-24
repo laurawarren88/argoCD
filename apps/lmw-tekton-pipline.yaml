@@ -1,14 +1,14 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: helm-chart
+  name: lmw-tekton-pipeline
   namespace: argocd
 spec:
   project: default
   source:
-    repoURL: https://github.com/laurawarren88/helm-chart.git
+    repoURL: https://github.com/laurawarren88/tekton_chart.git
     targetRevision: HEAD
-    path: .
+    path: helm_chart
   destination:
     server: https://kubernetes.default.svc
     namespace: lmw-fitness
