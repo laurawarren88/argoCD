@@ -8,7 +8,7 @@ spec:
   source:
     repoURL: https://github.com/laurawarren88/tekton_chart.git
     targetRevision: HEAD
-    path: helm_chart
+    path: .
   destination:
     server: https://kubernetes.default.svc
     namespace: lmw-fitness
