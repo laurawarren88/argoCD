@@ -3,6 +3,8 @@ kind: Application
 metadata:
   name: lmw-tekton-pipeline
   namespace: argocd
+annotations:
+  argocd.argoproj.io/sync-options: Prune=false
 spec:
   project: default
   source:
@@ -17,4 +19,4 @@ spec:
     - CreateNamespace=true
     automated:
       selfHeal: true
-      prune: true
+      prune: false
